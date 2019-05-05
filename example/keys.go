@@ -15,7 +15,10 @@ func main() {
 		log.Fatal(err)
 	}
 
+
+
 	path := hdwallet.MustParseDerivationPath("m/44'/60'/0'/0/0")
+	fmt.Println("path is: %s\n",path);
 	account, err := wallet.Derive(path, false)
 	if err != nil {
 		log.Fatal(err)

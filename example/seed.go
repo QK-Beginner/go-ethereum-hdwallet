@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"log"
-
 	"github.com/miguelmota/go-ethereum-hdwallet"
 )
 
@@ -13,6 +12,7 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
+
 
 	path := hdwallet.MustParseDerivationPath("m/44'/60'/0'/0/0")
 	account, err := wallet.Derive(path, false)
