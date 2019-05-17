@@ -2,9 +2,11 @@ package main
 
 import (
 	"context"
+	"encoding/hex"
 	"fmt"
 	"log"
 	"math/big"
+	"strconv"
 	_ "strings"
 
 	// token "./contracts_erc20" // for demo
@@ -76,11 +78,13 @@ func main() {
 			transferEvent.From = common.HexToAddress(vLog.Topics[1].Hex())
 			transferEvent.To = common.HexToAddress(vLog.Topics[2].Hex())
 
-
 			fmt.Printf("From: %s\n", transferEvent.From.Hex())
 			fmt.Printf("To: %s\n", transferEvent.To.Hex())
 			bytes := common.Bytes2Hex(vLog.Data)
-			fmt.Printf("%#v", bytes)
+
+
+
+			fmt.Printf("%v", bytes)
 
 		}
 		println("\n")

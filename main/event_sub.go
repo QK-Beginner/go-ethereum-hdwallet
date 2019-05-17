@@ -29,7 +29,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	contractAddress := common.HexToAddress("0xd26114cd6EE289AccF82350c8d8487fedB8A0C07")
+	contractAddress := common.HexToAddress("0xd77bcd9cf4212a41defbcd2e2ff0f50fea2be643")
 	query := ethereum.FilterQuery{
 		Addresses: []common.Address{contractAddress},
 	}
